@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import { Flex } from "rebass";
+import styled, { createGlobalStyle } from "styled-components";
+import Header from "./components/Header";
+
+const sideBarTextColor = "black";
+const htmlBackgroundColor = "#f7f7f7";
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    width: 100%;
+  }
+
+  html {
+    background-color: ${htmlBackgroundColor};
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+`;
+
+const Container = styled(Flex)`
+  min-width: 1080px;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <GlobalStyle />
+      <Header />
+    </Container>
   );
-}
+};
 
 export default App;
