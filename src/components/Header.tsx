@@ -2,14 +2,8 @@ import React from "react";
 import { Flex, Text } from "rebass";
 import RelayLogo from "./RelayLogo";
 
-const headerHeight = "50px";
-const headerBackgroundColor = "#f26b00";
-
-// const HeaderSide = styled.div`
-//   margin-left: auto;
-//   margin-right: 0;
-//   display: flex;
-// `;
+export const headerHeight = "50px";
+export const headerBackgroundColor = "#f26b00";
 
 const Header = () => {
   return (
